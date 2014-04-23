@@ -8,21 +8,23 @@
 //****************************************************************************
 
 public class WordLists {
-	String fileChoice;
+	private String fileChoice;
+	private String[] currentList;
+	private ArrayList<String> dictList;	// this should be entire dictionary read in from file
 	//instance variables
 
 	public WordLists() {
 		fileChoice = "dictionary.txt";
 
-		File inFile = new File(args[0]);
+		File inFile = new File(fileChoice);
 		Scanner dataIn = new Scanner(inFile);
 		String fileEntry;
-		PrintWriter dataOut = new PrintWriter(args[1]);
+		PrintWriter dataOut = new PrintWriter("outfile.txt");
 		while (dataIn.hasNext()) {
 			fileEntry = dataIn.next();
 			dataOut.println(fileEntry);
 		}
-			dataOut.close();
+		dataOut.close();
 
 		//
 	}
@@ -31,17 +33,15 @@ public class WordLists {
 	public WordLists(String fileName) {
 		fileChoice = fileName;
 
-		File inFile = new File(args[0]);
+		File inFile = new File(fileChoice);
 		Scanner dataIn = new Scanner(inFile);
 		String fileEntry;
-		PrintWriter dataOut = new PrintWriter(args[1]);
 		while (dataIn.hasNext()) {
 			fileEntry = dataIn.next();
-			dataOut.println(fileEntry);
+			dictList.append(fileEntry);
 		}
-			dataOut.close();
-
-		//
+		//System.out.println(dictList);
+		
 	}
 	//constructor with parameters
 
@@ -52,6 +52,13 @@ public class WordLists {
 
 	public writeLists(String[] results) {
 		//toString method?
+		PrintWriter dataOut = new PrintWriter("outfile.txt");
+
+		// for loop over results
+			// save the current string as fileEntry
+			// dataOut.println(fileEntry);
+		//dataOut.close();
+
 	}
 	//
 
@@ -66,6 +73,12 @@ public class WordLists {
 
 	public String[] lengthN(int n) {
 		//
+		// initialize array String[] results = new String[5000] or size of dictList, could be stored as an instance variable
+		// loop over dictList, and check size of each word
+			// append words of correct length to an ArrayList<String> results
+		// get the size of ArrayList, and then create String[] of this size, and copy everything over, return this String[]
+		
+
 	}
 	//
 

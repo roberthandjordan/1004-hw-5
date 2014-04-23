@@ -22,15 +22,17 @@ public class WordListsTester {
 
 
 		do {
-			if (args.length>0) {
+			if (args.length<1) {
 				WordLists portal = new WordLists();
 				portal.launch();
 
 
 			}
 			else {
-				WordLists portal = new WordLists(args);
-				portal.launch(args);
+				WordLists portal = new WordLists(args[0]);
+				//portal.launch();
+				String[] lengthTest = portal.lengthN(7);
+				
 
 
 			}
