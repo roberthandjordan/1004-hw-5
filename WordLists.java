@@ -73,11 +73,12 @@ public class WordLists {
 
 	public String[] lengthN(int n) {
 		//
-		// initialize array String[] results = new String[5000] or size of dictList, could be stored as an instance variable
+		// Option 1: initialize array String[] results = new String[5000] or size of dictList, could be stored as an instance variable
+		// Option 2: initialize ArrayList<String> results;
 		// loop over dictList, and check size of each word
 			// append words of correct length to an ArrayList<String> results
 		// get the size of ArrayList, and then create String[] of this size, and copy everything over, return this String[]
-		
+
 
 	}
 	//
